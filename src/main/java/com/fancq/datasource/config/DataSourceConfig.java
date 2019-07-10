@@ -33,6 +33,7 @@ public class DataSourceConfig {
         return DataSourceBuilder.create().build();
     }
 
+    @Bean
     public DataSource myRoutingDataSource(@Qualifier("masterDataSource") DataSource masterDataSource,
                                           @Qualifier("slave1DataSource") DataSource slave1DataSource,
                                           @Qualifier("slave2DataSource") DataSource slave2DataSource) {
